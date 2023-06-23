@@ -18,11 +18,11 @@
     <div class="mx-auto col-sm-8 m-3 bg-light">
         <div class="row">
             <div class="col-3 d-flex justify-content-start align-items-center">
-                <h1>MyPOS</h1>
+                <h1>My Point Of Sales</h1>
             </div>
 
             <div class="col-3 d-flex justify-content-center align-items-center ">
-                <h4 id="current-time"></h4>
+                <h5 id="current-time"></h5>
             </div>
 
             <div class="col-3 d-flex justify-content-center align-items-center ">
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-3 d-flex justify-content-end align-items-center">
-                <button class="btn btn-sm btn-info" onclick="signout()"> Log Out</button>
+                <button class="btn btn-sm btn-info" onclick="logout()"> Log Out</button>
             </div>   
 
             <div class="col-12">
@@ -193,59 +193,43 @@
 
 
                     <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-drinks-tab"><br>
-                    <h3>Drinks & Beverages</h3>
+                    <h3>Fins</h3>
 
                     <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 39); selectaudio.play();">
-                            <img draggable="false" src="./assets/coke.jpg" class="card-img-top mt-3" alt="food">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
+                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
-                            <h5 class="card-title">Coke</h5>
-                            <p class="fw-bold text-danger">P39</p>
+                            <h5 class="card-title">Purple Fins</h5>
+                            <p class="fw-bold text-secondary">P 2999.00</p>
                             </div>
                         </div> 
                         
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(18, 'Sprite', 39); selectaudio.play();">
-                            <img draggable="false" src="./assets/sprite.jpg" class="card-img-top mt-3" alt="food">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
+                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
-                            <h5 class="card-title">Sprite</h5>
-                            <p class="fw-bold text-danger">P39</p>
+                            <h5 class="card-title">Purple Fins</h5>
+                            <p class="fw-bold text-secondary">P 2999.00</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(19, 'Pepsi', 39); selectaudio.play();">
-                            <img draggable="false" src="./assets/pepsi.jpg" class="card-img-top mt-3" alt="food">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
+                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
-                            <h5 class="card-title">Pepsi</h5>
-                            <p class="fw-bold text-danger">P39</p>
+                            <h5 class="card-title">Purple Fins</h5>
+                            <p class="fw-bold text-secondary">P 2999.00</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(020, 'Mountain Dew', 39); selectaudio.play();">
-                            <img draggable="false" src="./assets/mdew.jpg" class="card-img-top mt-3" alt="food">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
+                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
-                            <h5 class="card-title">M-Dew</h5>
-                            <p class="fw-bold text-danger">P39</p>
+                            <h5 class="card-title">Purple Fins</h5>
+                            <p class="fw-bold text-secondary">P 2999.00</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Iced Tea', 29); selectaudio.play();">
-                            <img draggable="false" src="./assets/icedtea.jpg" class="card-img-top mt-3" alt="food">
-                            <div class="card-body">
-                            <h5 class="card-title">Iced Tea</h5>
-                            <p class="fw-bold text-danger">P29</p>
-                            </div>
-                        </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Beer', 69); selectaudio.play();">
-                            <img draggable="false" src="./assets/beer.png" class="card-img-top mt-3" alt="food">
-                            <div class="card-body">
-                            <h5 class="card-title">Beer</h5>
-                            <p class="fw-bold text-danger">P69</p>
-                            </div>
-                        </div>
-                        
-                        
 
                     </div>    
 
@@ -253,15 +237,15 @@
 
 
                     <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-desserts-tab"><br>
-                    <h3>Desserts</h3>
+                    <h3>SWimsuit</h3>
 
                     <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Ice Cream', 49); selectaudio.play();">
-                            <img draggable="false" src="./assets/icecream.jpg" class="card-img-top mt-3" alt="food">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'swimsuit', 2999.00); selectaudio.play();">
+                            <img draggable="false" src="./images/red.jpeg" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
-                            <h5 class="card-title">Ice Cream</h5>
-                            <p class="fw-bold text-danger">P49</p>
+                            <h5 class="card-title">1O pc</h5>
+                            <p class="fw-bold text-secondary">P2999.00</p>
                             </div>
                         </div> 
                         
