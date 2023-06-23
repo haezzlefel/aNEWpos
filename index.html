@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-3 d-flex justify-content-end align-items-center">
-                <button class="btn btn-sm btn-info" onclick="logout()"> Log Out</button>
+                <button class="btn btn-sm btn-warning" onclick="logout()"> Log Out</button>
             </div>   
 
             <div class="col-12">
@@ -294,7 +294,7 @@
     </div>
 
     <div class="mx-auto col-sm-3 m-3 bg-light rounded">
-        <div><center><h4 class="m-3">Order Summary</h4></center></div>
+        <div><center><h4 class="m-3">Purchased items</h4></center></div>
         <center><div class="line mb-3"></div></center>
 
         <div class="selected-items">
@@ -305,7 +305,7 @@
                 </div>
                 
                 <div class="col-6 d-flex justify-content-end align-items-center mb-1">
-                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-danger btn-sm">Clear</button>
+                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-warning btn-sm">Clear</button>
                 </div>
             </div>
             <div class="card pt-5 mx-auto"> 
@@ -401,7 +401,7 @@
                             <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('100'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">100</button></div>
                             <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('200'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">200</button></div>
                             <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('500'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">500</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">1000</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000'); selectaudio.play()" style="width:100px" class="text-white btn bg-light  text-center mb-1">1000</button></div>
                         
 
 
@@ -410,7 +410,7 @@
                         <div class="container-{breakpoint} row">
                         <div class="col-sm-4"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="audio.play()">Cancel Order</button></div>
                         <div class="col-sm-4"><button  id="confirmpaid" onclick="confirmpaidbutton(); selectaudio.play()" type="button" class="btn btn-primary" disabled>Confirm Payment</button></div>
-                        <div class="col-sm-4"><button data-bs-toggle="modal" data-bs-target="#myModal1"  id="printbutton" type="button" class="btn btn-primary" onclick="stopclock(); selectaudio.play()" disabled>Print Receipt & Proceed</button></div>
+                        <div class="col-sm-4"><button data-bs-toggle="modal" data-bs-target="#myModal1"  id="printbutton" type="button" class="btn btn-primary" onclick="stopclock(); selectaudio.play()" disabled>Print Receipt</button></div>
                         </div>
                         </div>
                     </div>
