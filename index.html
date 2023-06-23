@@ -237,14 +237,14 @@
 
 
                     <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-desserts-tab"><br>
-                    <h3>SWimsuit</h3>
+                    <h3>Swimsuit</h3>
 
                     <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
                         <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'swimsuit', 2999.00); selectaudio.play();">
                             <img draggable="false" src="./images/red.jpeg" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
-                            <h5 class="card-title">1O pc</h5>
+                            <h5 class="card-title">1pc Red Swimsuit</h5>
                             <p class="fw-bold text-secondary">P2999.00</p>
                             </div>
                         </div> 
@@ -342,20 +342,7 @@
                         </div>
                         <div class="modal-body">
                        
-                           <div class="row mb-2">
-                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Table No.</label>
-                            <div class="col-sm-8">
-                                <select class="form-control form-control-sm text-center" id="customername" placeholder="Enter Customer No.">
-                                    <option value="Table 1">Table 1</option>
-                                    <option value="Table 2">Table 2</option>
-                                    <option value="Table 3">Table 3</option>
-                                    <option value="Table 4">Table 4</option>
-                                    <option value="Table 5">Table 5</option>
-                                    <option value="Table 6">Table 6</option>
-                                    <option value="Table 7">Table 7</option>
-                                </select>
-                            </div>
-                           </div> 
+                           
 
                            <div class="row mb-2">
                             <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Amount to Pay:</label>
@@ -380,13 +367,11 @@
 
                            <hr>
 
-                           <center><button id="paywithgcashbtn" class="btn btn-warning rounded" onclick="paywithgcash()">Pay with G-cash</button></center>
+                           <center><button id="paywithcashbtn" class="btn btn-warning rounded" onclick="paywithcash()">Cash</button></center>
 
-                           <center><img src="./assets/gcash_qr.jpg" id="gcashqr" alt="Gcash QR code" style="width: 300px;"></center>
+                           <center><button id="donepaywithcashbtn" class="btn btn-warning rounded mb-2 fw-bold w-25" onclick="donepaywithcash()">Confirm Cash Payment</button></center>
 
-                           <center><button id="donepaywithgcashbtn" class="btn btn-warning rounded mb-2 fw-bold w-25" onclick="donepaywithgcash()">Confirm G-cash Payment</button></center>
-
-                           <center><button id="cancelpaywithgcashbtn" class="btn btn-danger rounded fw-bold w-25" onclick="cancelpaywithgcash()">Cancel</button></center>
+                           <center><button id="cancelpaywithcashbtn" class="btn btn-danger rounded fw-bold w-25" onclick="cancelpaywithcash()">Cancel</button></center>
 
                            <hr>
 
@@ -398,25 +383,25 @@
                                 <input id="calculatorscreen" value="" type="text" class="bg-dark w-100 text-white text-end form-control form-control-md">
                             </div>
 
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('9'); selectaudio.play();" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">9</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('8'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">8</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('7'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">7</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('6'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">6</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('5'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">5</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('4'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">4</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('3'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">3</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('2'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">2</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('1'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">1</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('.'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">.</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('0'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">0</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('00'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">00</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorcancel(); audio.play()" style="width:100px" class="text-white fw-bold btn bg-danger rounded-pill text-center mb-1">delete</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="exactamount(); selectaudio.play()" style="width:100px" class="text-white fw-bold btn bg-success rounded-pill text-center mb-1">Exact</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('9'); selectaudio.play();" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">9</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('8'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">8</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('7'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">7</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('6'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">6</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('5'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">5</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('4'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">4</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('3'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">3</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('2'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">2</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('1'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">1</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('.'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">.</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('0'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">0</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('00'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">00</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorcancel(); audio.play()" style="width:100px" class="text-white fw-bold btn bg-secondary rounded-pill text-center mb-1">delete</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="exactamount(); selectaudio.play()" style="width:100px" class="text-white fw-bold btn bg-secondary rounded-pill text-center mb-1">Exact</button></div>
                             <hr>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('100'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">100</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('200'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">200</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('500'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">500</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">1000</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('100'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">100</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('200'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">200</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('500'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">500</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">1000</button></div>
                         
 
 
@@ -450,15 +435,14 @@
         <div id="receiptcontent" class="modal-body d-flex justify-content-center">
         <div>
           <center><h5 class="text-danger">My POS</h5></center>
-          <center><p>This is not an official receipt.</p></center>
+          <center><p>Transaction Receipt</p></center>
           <center><p id="receipttime"></p></center>
             <hr>
           <p id="receiptorderid"></p>
-          <p>Table Number: <span id="receipttable"></span> </p>  
           <p>Total Amount: ₱<span id="receiptamount"></span></p>
-          <p>Received Cash: ₱<span id="receiptcash"></span> </p>
+          <p>Cash Payment: ₱<span id="receiptcash"></span> </p>
           <p>Change Amount: ₱<span id="receiptchange"></span></p>
-          <p>Assigned Cashier: <span id="receiptcasher"></span></p>
+          <p>Cashier: <span id="receiptcashier"></span></p>
           <p>Mode of Payment: <span id="receiptmop">Cash</span></p>
           <hr>
           <center><p>Thank you, See us again!</p></center>
