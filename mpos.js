@@ -1,26 +1,6 @@
 
 
 let time = document.getElementById("current-time");
-let receipttime =  document.getElementById("receipttime");
-
-setInterval(() => {
-
-    let date = new Date();
-    time.innerHTML = date.toLocaleTimeString();
-    
-}, 1000);
-
-
-const myInterval = setInterval(receipt_time, 1000);
-
-function receipt_time() {
-    const date = new Date();
-    receipttime.innerHTML = date.toLocaleTimeString();
-}
-
-function stopclock() {
-    clearInterval(myInterval);
-}
 
   
 
@@ -372,7 +352,7 @@ function nextcustomerbuttonclear() {
 
 
 
-    function signout() {
+    function logout() {
         window.location.assign("index.html");
         alert("You are now logged out!")
         noBack()
@@ -403,19 +383,19 @@ function getreceiptdetails() {
     document.getElementById('receiptcasher').innerHTML = document.getElementById('poscashername').innerHTML
 }
 
-const paywithgcashbtn = document.getElementById('paywithgcashbtn')
-const donepaywithgcashbtn = document.getElementById('donepaywithgcashbtn')
-const cancelpaywithgcashbtn = document.getElementById('cancelpaywithgcashbtn')
+const paywithcashbtn = document.getElementById('paywithcashbtn')
+const donepaywithgcashbtn = document.getElementById('donepaywithcashbtn')
+const cancelpaywithgcashbtn = document.getElementById('cancelpaywithcashbtn')
 const gcashqr = document.getElementById('gcashqr')
 
-function paywithgcash() {
+function paywithcash() {
     gcashqr.style.display = "block"
     donepaywithgcashbtn.style.display = "block"
     cancelpaywithgcashbtn.style.display = "block"
-    paywithgcashbtn.style.display = "none"
+    paywithcashbtn.style.display = "none"
 }
 
-function donepaywithgcash() {
+function donepaywithcash() {
     gcashqr.style.display = "none"
     donepaywithgcashbtn.style.display = "none"
     cancelpaywithgcashbtn.style.display = "none"
@@ -428,16 +408,36 @@ function donepaywithgcash() {
     getreceiptdetails()
 }
 
-function cancelpaywithgcash() {
+function cancelpaywithcash() {
     gcashqr.style.display = "none"
     donepaywithgcashbtn.style.display = "none"
-    cancelpaywithgcashbtn.style.display = "none"
-    paywithgcashbtn.style.display = "block"
+    cancelpaywithcashbtn.style.display = "none"
+    paywithcashbtn.style.display = "block"
 
 }
 
 
 
+let receipttime =  document.getElementById("receipttime");
+
+setInterval(() => {
+
+    let date = new Date();
+    time.innerHTML = date.toLocaleTimeString();
+    
+}, 1000);
+
+
+const myInterval = setInterval(receipt_time, 1000);
+
+function receipt_time() {
+    const date = new Date();
+    receipttime.innerHTML = date.toLocaleTimeString();
+}
+
+function stopclock() {
+    clearInterval(myInterval);
+}
 
 
 

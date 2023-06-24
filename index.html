@@ -18,19 +18,16 @@
     <div class="mx-auto col-sm-8 m-3 bg-light">
         <div class="row">
             <div class="col-3 d-flex justify-content-start align-items-center">
-                <h1>My Point Of Sales</h1>
+               <!--logo dapat-->
             </div>
 
-            <div class="col-3 d-flex justify-content-center align-items-center ">
-                <h5 id="current-time"></h5>
-            </div>
 
             <div class="col-3 d-flex justify-content-center align-items-center ">
                 <h5>User: <span id="poscashiername"></span></h5>
             </div>
 
             <div class="col-3 d-flex justify-content-end align-items-center">
-                <button class="btn btn-sm btn-warning" onclick="logout()"> Log Out</button>
+                <button class="btn btn-sm btn-secondary" onclick="logout()"> Log Out</button>
             </div>   
 
             <div class="col-12">
@@ -63,7 +60,7 @@
                             <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
                             <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <p class="fw-bold text-secondary">P 499.00</p>
                             </div>
                         </div>
 
@@ -121,7 +118,7 @@
                             <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
                             <div class="card-body">
                             <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <p class="fw-bold text-primary">P 499.00</p>
                             </div>
                         </div>
 
@@ -293,8 +290,8 @@
         </div>
     </div>
 
-    <div class="mx-auto col-sm-3 m-3 bg-light rounded">
-        <div><center><h4 class="m-3">Purchased items</h4></center></div>
+    <div class="mx-auto col-sm-4 m-3 bg-light ">
+        <div><center><h5 class="m-3">Purchased items</h5></center></div>
         <center><div class="line mb-3"></div></center>
 
         <div class="selected-items">
@@ -305,7 +302,7 @@
                 </div>
                 
                 <div class="col-6 d-flex justify-content-end align-items-center mb-1">
-                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-warning btn-sm">Clear</button>
+                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-secondary btn-sm">Clear</button>
                 </div>
             </div>
             <div class="card pt-5 mx-auto"> 
@@ -330,8 +327,15 @@
         </div>
 
         <div>
-            <button disabled="" id="checkout" class="btn btn-success btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
+            <button disabled="" id="checkout" class="btn btn-info btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
 
+            <br>
+            <br/>
+        <container>
+            <div class="col-3 d-flex justify-content-center align-items-center ">
+                <h5 id="current-time"></h5>
+            </div>
+        </container>            
             <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -367,11 +371,11 @@
 
                            <hr>
 
-                           <center><button id="paywithcashbtn" class="btn btn-warning rounded" onclick="paywithcash()">Cash</button></center>
+                           <center><button id="paywithcashbtn" class="btn btn-info rounded" onclick="paywithcash()">Cash</button></center>
 
-                           <center><button id="donepaywithcashbtn" class="btn btn-warning rounded mb-2 fw-bold w-25" onclick="donepaywithcash()">Confirm Cash Payment</button></center>
+                           <center><button id="donepaywithcashbtn" class="btn btn-info rounded mb-2 fw-bold w-25" onclick="donepaywithcash()">Confirm Cash Payment</button></center>
 
-                           <center><button id="cancelpaywithcashbtn" class="btn btn-danger rounded fw-bold w-25" onclick="cancelpaywithcash()">Cancel</button></center>
+                           <center><button id="cancelpaywithcashbtn" class="btn btn-info rounded fw-bold w-25" onclick="cancelpaywithcash()">Cancel</button></center>
 
                            <hr>
 
