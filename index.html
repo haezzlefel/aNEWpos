@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Sulphur Point' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <title>MyPOS</title>
+    <title>POS</title>
 </head>
 <body>
 
@@ -18,330 +18,324 @@
     <div class="mx-auto col-sm-8 m-3 bg-light">
         <div class="row">
             <div class="col-3 d-flex justify-content-start align-items-center">
-               <!--logo dapat-->
+              
             </div>
 
-
-            <div class="col-3 d-flex justify-content-center align-items-center ">
-                <h5>User: <span id="poscashiername"></span></h5>
-            </div>
 
             <div class="col-3 d-flex justify-content-end align-items-center">
-                <button class="btn btn-sm btn-secondary" onclick="logout()"> Log Out</button>
-                
+                <button class="btn btn-sm btn-danger" onclick="signout()">Sign-Out</button>
+            </div>   
 
             <div class="col-12">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                    <a class="nav-link active fw-bold" data-bs-toggle="tab" href="#home">Equipments</a>
+                    <a class="nav-link active fw-bold" data-bs-toggle="tab" href="#home">Foods</a>
                     </li>
-            </div>   
                     <li class="nav-item">
-                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#menu1">Footwear</a>
+                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#menu1">Drinks & Beverages</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#menu2">Swimsuit</a>
+                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#menu2">Desserts</a>
                     </li>
                 </ul>
                 
-                <!-- Tab panes -->
-                <div class="tab-content" id="pills-TabContent">
-                    <div id="home" class="container fade show tab-pane active" role="tabpanel" aria-labelledby="pills-food-tab"><br>
-                
-
-                    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
-
-                   
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Yellow Goggles', 799); selectaudio.play();">
-                            <img draggable="false" src="./images/yellowg.jpg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Yellow</h5>
-                            <p class="fw-bold text-secondary">P 799.00</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(02, 'Olive Green Goggles', 799); selectaudio.play();">
-                            <img draggable="false" src="./images/olive green.jpg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Olive Green</h5>
-                            <p class="fw-bold text-secondary">P 799.00</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(03, 'Corn Soup', 799); selectaudio.play();">
-                            <img draggable="false" src="./images/green.avif" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Green</h5>
-                            <p class="fw-bold text-secondary">P 799.00</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(04, 'Pink Goggles', 799); selectaudio.play();">
-                            <img draggable="false" src="./images/pink1.jpg" class="card-img-top mt-3" alt="pinkl goggles">
-                            <div class="card-body">
-                            <h5 class="card-title">Pink</h5>
-                            <p class="fw-bold text-secondary">P 799.00</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(05,'mask pink', 1100); selectaudio.play();">
-                            <img draggable="false" src="./images/a1.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Mask Pink</h5>
-                            <p class="fw-bold text-secondary">P 1000</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(06, 'mask purple', 119); selectaudio.play();">
-                            <img draggable="false" src="./images/a2.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Mask Purple</h5>
-                            <p class="fw-bold text-secondary">P 1000</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(07, 'mask green', 1000); selectaudio.play();">
-                            <img draggable="false" src="./images/a3.jpeg" class="card-img-top mt-3" alt="food">
-                            <div class="card-body">
-                            <h5 class="card-title">Mask Green</h5>
-                            <p class="fw-bold text-secondary">P 1000</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(08, 'mask glitter', 1000); selectaudio.play();">
-                            <img draggable="false" src="./images/a4.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Mask Glitter</h5>
-                            <p class="fw-bold text-secondary">P 1000</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(09,'Rapide pink', 1100); selectaudio.play();">
-                            <img draggable="false" src="./images/b1.avif" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Rapide Pink</h5>
-                            <p class="fw-bold text-secondary">P 1100</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(010, 'Rapide purple, 1100); selectaudio.play();">
-                            <img draggable="false" src="./images/b2.avif" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Rapide Violet</h5>
-                            <p class="fw-bold text-secondary">P 1100</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(011, 'Rapide Blue',1100); selectaudio.play();">
-                            <img draggable="false" src="./images/b3.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Rapide Blue</h5>
-                            <p class="fw-bold text-secondary">P 1100</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(012, 'Rapide Light', 1100); selectaudio.play();">
-                            <img draggable="false" src="./images/b4.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Rapide Light</h5>
-                            <p class="fw-bold text-secondary">P 1100</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(013, 'Heart Goggles', 999); selectaudio.play();">
-                            <img draggable="false" src="./images/f1.jpg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Heart</h5>
-                            <p class="fw-semibold text-secondary">P 999</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(014, 'Circle Goggles', 999); selectaudio.play();">
-                            <img draggable="false" src="./images/f2.jpg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Circle</h5>
-                            <p class="fw-semibold text-secondary">P 999</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(015, 'Glitter Goggles', 999); selectaudio.play();">
-                            <img draggable="false" src="./images/f3.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Glitter</h5>
-                            <p class="fw-semibold text-secondary">P 999</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Mint Goggles', 999); selectaudio.play();">
-                            <img draggable="false" src="./images/f4.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 c0lass="card-title"> Mint Goggles</h5>
-                            <p class="fw-semibold text-secondary">P 999</p>
-                            </div>
-                        </div>
-                        
-
-                    </div>      
-
-                </div>
+<!-- Tab panes -->
+<div class="tab-content" id="pills-TabContent">
+    <div id="home" class="container fade show tab-pane active" role="tabpanel" aria-labelledby="pills-food-tab"><br>
 
 
-                    <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="Footwear-tab"><br>
-                    
+    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
-                    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(237, 231, 231, 0.164);">
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Fins pink', 2200); selectaudio.play();">
-                            <img draggable="false" src="./images/c1.jpg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Fins Pink</h5>
-                            <p class="fw-semibold text-secondary">P 2200</p>
-                            </div>
-                        </div> 
-                        
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(18, 'Fins Light', 2200); selectaudio.play();">
-                            <img draggable="false" src="./images/c2.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Fins Light</h5>
-                            <p class="fw-semibold text-secondary">P 2200</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(19, 'Fins Blue', 2200); selectaudio.play();">
-                            <img draggable="false" src="./images/c3.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Fins Blue</h5>
-                            <p class="fw-semibold text-secondary">P 2200</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(020, 'Fins Rainbow', 2200); selectaudio.play();">
-                            <img draggable="false" src="./images/c4.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Fins Rainbow</h5>
-                            <p class="fw-semibold text-secondary">P 2200</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(021, 'Aquashoes Gray', 2499); selectaudio.play();">
-                            <img draggable="false" src="./images/e1.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Aquashoes 1</h5>
-                            <p class="fw-semibold text-secondary">P 2499</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(022, 'Aquashoes Mint', 2499); selectaudio.play();">
-                            <img draggable="false" src="./images/e2.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Aquashoes 2</h5>
-                            <p class="fw-semibold text-secondary">P 2499</p>
-                            </div>
-                        </div>
-                        
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(023, 'Aquashoes Pink', 2499); selectaudio.play();">
-                            <img draggable="false" src="./images/e3.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Aquashoes 3 </h5>
-                            <p class="fw-semibold text-secondary">P 2499</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(024, 'Aquashoes Black', 2499); selectaudio.play();">
-                            <img draggable="false" src="./images/e4.webp" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">Aquashoes 4 </h5>
-                            <p class="fw-semibold text-secondary">P 2499</p>
-                            </div>
-                        </div>
-                        
-
-                    </div>    
-
-                    </div>
-
-
-                    <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-desserts-tab"><br>
-                    
-
-                    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(181, 175, 175, 0.164);">
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(025, '2pc Pink', 1499); selectaudio.play();">
-                            <img draggable="false" src="./images/2pcpink.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">2pc Pink</h5>
-                            <p class="fw-semibold text-secondary">P 1499</p>
-                            </div>
-                        </div> 
-                        
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(026, '2pc Blue', 1499); selectaudio.play();">
-                            <img draggable="false" src="./images/2pcblue.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">2pc Blue</h5>
-                            <p class="fw-semibold text-secondary">P 1499</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(027, '1pc Yellow', 1499); selectaudio.play();">
-                            <img draggable="false" src="./images/1pcyellow.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">1pc Yellow</h5>
-                            <p class="fw-semibold text-secondary">P 1499</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(028, '1pc Blue', 1499); selectaudio.play();">
-                            <img draggable="false" src="./images/1pcblue.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">1pc Blue</h5>
-                            <p class="fw-semibold text-secondary">P 1499</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(029, '1pc rainbow', 1599); selectaudio.play();">
-                            <img draggable="false" src="./images/1pcrainbow.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">1Pc Rainbow</h5>
-                            <p class="fw-semibold text-secondary">P 1599</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(030, '1pc stripes', 1599); selectaudio.play();">
-                            <img draggable="false" src="./images/1pcstripes.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">1Pc Stripes</h5>
-                            <p class="fw-semibold text-secondary">P 1599</p>
-                            </div>
-                        </div>
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(031, '1pc pink', 1599); selectaudio.play();">
-                            <img draggable="false" src="./images/1pcpink.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">1Pc Pink</h5>
-                            <p class="fw-semibold text-secondary">P 1599</p>
-                            </div>
-                        </div>
-                        
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(032, '1pc flower ', 1599); selectaudio.play();">
-                            <img draggable="false" src="./images/1pcflower.jpeg" class="card-img-top mt-3" alt="#">
-                            <div class="card-body">
-                            <h5 class="card-title">1Pc Flower</h5>
-                            <p class="fw-semibold text-secondary">P 1599</p>
-                            </div>
-                        </div>
-                        
-
-                    </div>    
-
-                    </div>
-                </div>  
-            </div>    
+   
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Yellow Goggles', 799); selectaudio.play();">
+            <img draggable="false" src="./images/yellowg.jpg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Yellow</h5>
+            <p class="fw-bold text-secondary">P 799.00</p>
+            </div>
         </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(02, 'Olive Green Goggles', 799); selectaudio.play();">
+            <img draggable="false" src="./images/olive green.jpg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Olive Green</h5>
+            <p class="fw-bold text-secondary">P 799.00</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(03, 'Corn Soup', 799); selectaudio.play();">
+            <img draggable="false" src="./images/green.avif" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Green</h5>
+            <p class="fw-bold text-secondary">P 799.00</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(04, 'Pink Goggles', 799); selectaudio.play();">
+            <img draggable="false" src="./images/pink1.jpg" class="card-img-top mt-3" alt="pinkl goggles">
+            <div class="card-body">
+            <h5 class="card-title">Pink</h5>
+            <p class="fw-bold text-secondary">P 799.00</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(05,'mask pink', 1100); selectaudio.play();">
+            <img draggable="false" src="./images/a1.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Mask Pink</h5>
+            <p class="fw-bold text-secondary">P 1000</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(06, 'mask purple', 119); selectaudio.play();">
+            <img draggable="false" src="./images/a2.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Mask Purple</h5>
+            <p class="fw-bold text-secondary">P 1000</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(07, 'mask green', 1000); selectaudio.play();">
+            <img draggable="false" src="./images/a3.jpeg" class="card-img-top mt-3" alt="food">
+            <div class="card-body">
+            <h5 class="card-title">Mask Green</h5>
+            <p class="fw-bold text-secondary">P 1000</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(08, 'mask glitter', 1000); selectaudio.play();">
+            <img draggable="false" src="./images/a4.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Mask Glitter</h5>
+            <p class="fw-bold text-secondary">P 1000</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(09,'Rapide pink', 1100); selectaudio.play();">
+            <img draggable="false" src="./images/b1.avif" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Rapide Pink</h5>
+            <p class="fw-bold text-secondary">P 1100</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(010, 'Rapide purple, 1100); selectaudio.play();">
+            <img draggable="false" src="./images/b2.avif" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Rapide Violet</h5>
+            <p class="fw-bold text-secondary">P 1100</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(011, 'Rapide Blue',1100); selectaudio.play();">
+            <img draggable="false" src="./images/b3.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Rapide Blue</h5>
+            <p class="fw-bold text-secondary">P 1100</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(012, 'Rapide Light', 1100); selectaudio.play();">
+            <img draggable="false" src="./images/b4.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Rapide Light</h5>
+            <p class="fw-bold text-secondary">P 1100</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(013, 'Heart Goggles', 999); selectaudio.play();">
+            <img draggable="false" src="./images/f1.jpg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Heart</h5>
+            <p class="fw-semibold text-secondary">P 999</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(014, 'Circle Goggles', 999); selectaudio.play();">
+            <img draggable="false" src="./images/f2.jpg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Circle</h5>
+            <p class="fw-semibold text-secondary">P 999</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(015, 'Glitter Goggles', 999); selectaudio.play();">
+            <img draggable="false" src="./images/f3.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Glitter</h5>
+            <p class="fw-semibold text-secondary">P 999</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Mint Goggles', 999); selectaudio.play();">
+            <img draggable="false" src="./images/f4.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 c0lass="card-title"> Mint Goggles</h5>
+            <p class="fw-semibold text-secondary">P 999</p>
+            </div>
+        </div>
+        
+
+    </div>      
+
+</div>
+
+
+    <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="Footwear-tab"><br>
+    
+
+    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(237, 231, 231, 0.164);">
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Fins pink', 2200); selectaudio.play();">
+            <img draggable="false" src="./images/c1.jpg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Fins Pink</h5>
+            <p class="fw-semibold text-secondary">P 2200</p>
+            </div>
+        </div> 
+        
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(18, 'Fins Light', 2200); selectaudio.play();">
+            <img draggable="false" src="./images/c2.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Fins Light</h5>
+            <p class="fw-semibold text-secondary">P 2200</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(19, 'Fins Blue', 2200); selectaudio.play();">
+            <img draggable="false" src="./images/c3.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Fins Blue</h5>
+            <p class="fw-semibold text-secondary">P 2200</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(020, 'Fins Rainbow', 2200); selectaudio.play();">
+            <img draggable="false" src="./images/c4.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Fins Rainbow</h5>
+            <p class="fw-semibold text-secondary">P 2200</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(021, 'Aquashoes Gray', 2499); selectaudio.play();">
+            <img draggable="false" src="./images/e1.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Aquashoes 1</h5>
+            <p class="fw-semibold text-secondary">P 2499</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(022, 'Aquashoes Mint', 2499); selectaudio.play();">
+            <img draggable="false" src="./images/e2.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Aquashoes 2</h5>
+            <p class="fw-semibold text-secondary">P 2499</p>
+            </div>
+        </div>
+        
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(023, 'Aquashoes Pink', 2499); selectaudio.play();">
+            <img draggable="false" src="./images/e3.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Aquashoes 3 </h5>
+            <p class="fw-semibold text-secondary">P 2499</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(024, 'Aquashoes Black', 2499); selectaudio.play();">
+            <img draggable="false" src="./images/e4.webp" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">Aquashoes 4 </h5>
+            <p class="fw-semibold text-secondary">P 2499</p>
+            </div>
+        </div>
+        
+
+    </div>    
+
     </div>
 
-    <div class="mx-auto col-sm-3 m-3 bg-light rounded-right">
-        <div><center><h4 class="m-3">Purchased Items</h4></center></div>
+
+    <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-desserts-tab"><br>
+    
+
+    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(181, 175, 175, 0.164);">
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(025, '2pc Pink', 1499); selectaudio.play();">
+            <img draggable="false" src="./images/2pcpink.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">2pc Pink</h5>
+            <p class="fw-semibold text-secondary">P 1499</p>
+            </div>
+        </div> 
+        
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(026, '2pc Blue', 1499); selectaudio.play();">
+            <img draggable="false" src="./images/2pcblue.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">2pc Blue</h5>
+            <p class="fw-semibold text-secondary">P 1499</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(027, '1pc Yellow', 1499); selectaudio.play();">
+            <img draggable="false" src="./images/1pcyellow.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">1pc Yellow</h5>
+            <p class="fw-semibold text-secondary">P 1499</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(028, '1pc Blue', 1499); selectaudio.play();">
+            <img draggable="false" src="./images/1pcblue.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">1pc Blue</h5>
+            <p class="fw-semibold text-secondary">P 1499</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(029, '1pc rainbow', 1599); selectaudio.play();">
+            <img draggable="false" src="./images/1pcrainbow.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">1Pc Rainbow</h5>
+            <p class="fw-semibold text-secondary">P 1599</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(030, '1pc stripes', 1599); selectaudio.play();">
+            <img draggable="false" src="./images/1pcstripes.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">1Pc Stripes</h5>
+            <p class="fw-semibold text-secondary">P 1599</p>
+            </div>
+        </div>
+
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(031, '1pc pink', 1599); selectaudio.play();">
+            <img draggable="false" src="./images/1pcpink.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">1Pc Pink</h5>
+            <p class="fw-semibold text-secondary">P 1599</p>
+            </div>
+        </div>
+        
+        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 21rem;" onclick="orderbasket(032, '1pc flower ', 1599); selectaudio.play();">
+            <img draggable="false" src="./images/1pcflower.jpeg" class="card-img-top mt-3" alt="#">
+            <div class="card-body">
+            <h5 class="card-title">1Pc Flower</h5>
+            <p class="fw-semibold text-secondary">P 1599</p>
+            </div>
+        </div>
+        
+
+    </div>    
+
+    </div>
+</div>  
+</div>    
+</div>
+</div>
+    <div class="mx-auto col-sm-3 m-3 bg-light rounded">
+        <div><center><h4 class="m-3">Order Summary</h4></center></div>
         <center><div class="line mb-3"></div></center>
 
         <div class="selected-items">
@@ -352,7 +346,7 @@
                 </div>
                 
                 <div class="col-6 d-flex justify-content-end align-items-center mb-1">
-                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-warning btn-sm">Clear</button>
+                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-danger btn-sm">Clear</button>
                 </div>
             </div>
             <div class="card pt-5 mx-auto"> 
@@ -377,7 +371,15 @@
         </div>
 
         <div>
-            <button disabled="" id="checkout" class="btn btn-info btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
+            <button disabled="" id="checkout" class="btn btn-success btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
+
+<!----cashiernameandtime-->
+            <div class="col-3 d-flex justify-content-center align-items-center ">
+                <h5>Cashier: <span id="poscashiername"></span></h5>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center ">
+                <h4 id="current-time"></h4>
+            </div>
 
             <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -389,7 +391,21 @@
                         </div>
                         <div class="modal-body">
                        
-                           
+                           <div class="row mb-2">
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Table No.</label>
+                            <div class="col-sm-8">
+                                <select class="form-control form-control-sm text-center" id="customername" placeholder="Enter Customer No.">
+                                    <option value="Table 1">Table 1</option>
+                                    <option value="Table 2">Table 2</option>
+                                    <option value="Table 3">Table 3</option>
+                                    <option value="Table 4">Table 4</option>
+                                    <option value="Table 5">Table 5</option>
+                                    <option value="Table 6">Table 6</option>
+                                    <option value="Table 7">Table 7</option>
+                                </select>
+                            </div>
+                           </div> 
+
                            <div class="row mb-2">
                             <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Amount to Pay:</label>
                             <div class="col-sm-8">
@@ -487,13 +503,14 @@
           <center><p id="receipttime"></p></center>
             <hr>
           <p id="receiptorderid"></p>
+          <p>Table Number: <span id="receipttable"></span> </p>  
           <p>Total Amount: ₱<span id="receiptamount"></span></p>
           <p>Received Cash: ₱<span id="receiptcash"></span> </p>
           <p>Change Amount: ₱<span id="receiptchange"></span></p>
           <p>Assigned Cashier: <span id="receiptcasher"></span></p>
           <p>Mode of Payment: <span id="receiptmop">Cash</span></p>
           <hr>
-          <center><p>Thank you! See us again!</p></center>
+          <center><p>Thank you! See us again</p></center>
 
         </div>  
         </div>
@@ -512,6 +529,6 @@
 
 
 
-<script src="mpos.js"></script>    
+<script src="mypos.js"></script>    
 </body>
 </html>
