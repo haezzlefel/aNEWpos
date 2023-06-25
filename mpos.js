@@ -11,11 +11,11 @@ document.getElementById('poscashiername').innerHTML = localStorage.getItem('cash
 
 
 const audio = new Audio();
-audio.src = "./tonebeep/store";
+audio.src = "./tonebeep/scanner.mp3";
 audio.volume = .1;
 
 const selectaudio = new Audio();
-selectaudio.src = "./assets/selectbeep.mp3"
+selectaudio.src = "./tonebeep/scanner.mp3"
 selectaudio.volume = 1;
 
 
