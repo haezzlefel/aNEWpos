@@ -30,203 +30,217 @@
                 <button class="btn btn-sm btn-secondary" onclick="logout()"> Log Out</button>
             </div>   
 
+
             <div class="col-12">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                    <a class="nav-link active fw-bold" data-bs-toggle="tab" href="#">Equipments</a>
+                    <a class="nav-link active fw-bold" data-bs-toggle="tab" href="#home">Foods</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#">Swimsuit</a>
+                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#menu1">Drinks & Beverages</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#">Footwear</a>
+                    <a class="nav-link fw-bold" data-bs-toggle="tab" href="#menu2">Desserts</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active fw-bold" data-bs-toggle="tab" href="#">Accessories</a>
-                        </li>
-    
                 </ul>
                 
-                <!-- Tab panel -->
+                <!-- Tab panes -->
                 <div class="tab-content" id="pills-TabContent">
                     <div id="home" class="container fade show tab-pane active" role="tabpanel" aria-labelledby="pills-food-tab"><br>
                     
-                    <h3>Kids Goggles</h3>  
+                    <h3>Foods</h3>  
 
                     <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
                    
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Lechon Belly', 269); selectaudio.play();">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-secondary">P 499.00</p>
+                            <h5 class="card-title">Lechon Belly</h5>
+                            <p class="fw-bold text-danger">P269</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(02, 'Blue Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/blueg.jpeg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(02, 'Pork Sisig', 169); selectaudio.play();">
+                            <img draggable="false" src="./assets/sisig.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Blue Goggles</h5>
-                            <p class="fw-bold text-secondary">P 499.00</p>
+                            <h5 class="card-title">Pork Sisig</h5>
+                            <p class="fw-bold text-danger">P169</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(03, 'Green Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/green.avif" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(03, 'Corn Soup', 69); selectaudio.play();">
+                            <img draggable="false" src="./assets/cornsoup.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Green Goggles</h5>
-                            <p class="fw-bold text-secondary">P 499.00</p>
+                            <h5 class="card-title">Corn Soup</h5>
+                            <p class="fw-bold text-danger">P69</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(04, ' Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(04, 'Lechon Baka', 369); selectaudio.play();">
+                            <img draggable="false" src="./assets/lechon baka.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-secondary">P 499.00</p>
+                            <h5 class="card-title">Lechon Baka</h5>
+                            <p class="fw-bold text-danger">P369</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(05,'Fried Chicken', 139); selectaudio.play();">
+                            <img draggable="false" src="./assets/friedchicken.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Fried Chicken</h5>
+                            <p class="fw-bold text-danger">P139</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(06, 'Lomi', 119); selectaudio.play();">
+                            <img draggable="false" src="./assets/lomi.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Lomi</h5>
+                            <p class="fw-bold text-danger">P119</p>
                             </div>
                         </div>
 
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(07, 'Dinuguan', 99); selectaudio.play();">
+                            <img draggable="false" src="./assets/dinuguan.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Dinuguan</h5>
+                            <p class="fw-bold text-danger">P99</p>
                             </div>
                         </div>
 
-
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(08, 'Pancit', 119); selectaudio.play();">
+                            <img draggable="false" src="./assets/pancit.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-primary">P 499.00</p>
+                            <h5 class="card-title">Pancit</h5>
+                            <p class="fw-bold text-danger">P119</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(09,'Chopsuey', 119); selectaudio.play();">
+                            <img draggable="false" src="./assets/chopsuey.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Chopsuey</h5>
+                            <p class="fw-bold text-danger">P119</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(010, 'Cebu Balbacua', 149); selectaudio.play();">
+                            <img draggable="false" src="./assets/balbacua.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Balbacua</h5>
+                            <p class="fw-bold text-danger">P149</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(011, 'Lumpia', 69); selectaudio.play();">
+                            <img draggable="false" src="./assets/lumpia.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Lumpia</h5>
+                            <p class="fw-bold text-danger">P69</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(012, 'Sinigang', 119); selectaudio.play();">
+                            <img draggable="false" src="./assets/sinigang.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Sinigang</h5>
+                            <p class="fw-bold text-danger">P119</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(013, 'Seafood Boil', 499); selectaudio.play();">
+                            <img draggable="false" src="./assets/seafoodboil.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Seafood-Boil</h5>
+                            <p class="fw-bold text-danger">P499</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(014, 'Shrimp Gambas', 99); selectaudio.play();">
+                            <img draggable="false" src="./assets/shrimp.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Shrimp</h5>
+                            <p class="fw-bold text-danger">P99</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(015, 'Crabs', 199); selectaudio.play();">
+                            <img draggable="false" src="./assets/crabs.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Crabs</h5>
+                            <p class="fw-bold text-danger">P199</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Pink Goggles', 499.00); selectaudio.play();">
-                            <img draggable="false" src="./images/pink g.jpg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Kaldereta', 249); selectaudio.play();">
+                            <img draggable="false" src="./assets/kaldereta.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Pink Goggles</h5>
-                            <p class="fw-bold text-danger">P 499.00</p>
+                            <h5 class="card-title">Kaldereta</h5>
+                            <p class="fw-bold text-danger">P249</p>
                             </div>
                         </div>
+                        
+
                     </div>      
+
                 </div>
 
 
                     <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-drinks-tab"><br>
-                    <h3>Fins</h3>
+                    <h3>Drinks & Beverages</h3>
 
                     <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
-                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 39); selectaudio.play();">
+                            <img draggable="false" src="./assets/coke.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Purple Fins</h5>
-                            <p class="fw-bold text-secondary">P 2999.00</p>
+                            <h5 class="card-title">Coke</h5>
+                            <p class="fw-bold text-danger">P39</p>
                             </div>
                         </div> 
                         
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
-                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(18, 'Sprite', 39); selectaudio.play();">
+                            <img draggable="false" src="./assets/sprite.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Purple Fins</h5>
-                            <p class="fw-bold text-secondary">P 2999.00</p>
+                            <h5 class="card-title">Sprite</h5>
+                            <p class="fw-bold text-danger">P39</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
-                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(19, 'Pepsi', 39); selectaudio.play();">
+                            <img draggable="false" src="./assets/pepsi.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Purple Fins</h5>
-                            <p class="fw-bold text-secondary">P 2999.00</p>
+                            <h5 class="card-title">Pepsi</h5>
+                            <p class="fw-bold text-danger">P39</p>
                             </div>
                         </div>
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Coke', 2999.00); selectaudio.play();">
-                            <img draggable="false" src="./images/kids fins.webp" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(020, 'Mountain Dew', 39); selectaudio.play();">
+                            <img draggable="false" src="./assets/mdew.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">Purple Fins</h5>
-                            <p class="fw-bold text-secondary">P 2999.00</p>
+                            <h5 class="card-title">M-Dew</h5>
+                            <p class="fw-bold text-danger">P39</p>
                             </div>
                         </div>
 
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Iced Tea', 29); selectaudio.play();">
+                            <img draggable="false" src="./assets/icedtea.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Iced Tea</h5>
+                            <p class="fw-bold text-danger">P29</p>
+                            </div>
+                        </div>
 
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Beer', 69); selectaudio.play();">
+                            <img draggable="false" src="./assets/beer.png" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Beer</h5>
+                            <p class="fw-bold text-danger">P69</p>
+                            </div>
+                        </div>
+                        
+                        
 
                     </div>    
 
@@ -234,15 +248,15 @@
 
 
                     <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-desserts-tab"><br>
-                    <h3>Swimsuit</h3>
+                    <h3>Desserts</h3>
 
                     <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
 
-                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'swimsuit', 2999.00); selectaudio.play();">
-                            <img draggable="false" src="./images/red.jpeg" class="card-img-top mt-3" alt="#">
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(017, 'Ice Cream', 49); selectaudio.play();">
+                            <img draggable="false" src="./assets/icecream.jpg" class="card-img-top mt-3" alt="food">
                             <div class="card-body">
-                            <h5 class="card-title">1pc Red Swimsuit</h5>
-                            <p class="fw-bold text-secondary">P2999.00</p>
+                            <h5 class="card-title">Ice Cream</h5>
+                            <p class="fw-bold text-danger">P49</p>
                             </div>
                         </div> 
                         
@@ -290,8 +304,8 @@
         </div>
     </div>
 
-    <div class="mx-auto col-sm-4 m-3 bg-light ">
-        <div><center><h5 class="m-3">Purchased items</h5></center></div>
+    <div class="mx-auto col-sm-3 m-3 bg-light rounded">
+        <div><center><h4 class="m-3">Order Summary</h4></center></div>
         <center><div class="line mb-3"></div></center>
 
         <div class="selected-items">
@@ -302,7 +316,7 @@
                 </div>
                 
                 <div class="col-6 d-flex justify-content-end align-items-center mb-1">
-                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-secondary btn-sm">Clear</button>
+                    <button onclick="orderbasketclear(); audio.play();" class="btn btn-danger btn-sm">Clear</button>
                 </div>
             </div>
             <div class="card pt-5 mx-auto"> 
@@ -327,15 +341,8 @@
         </div>
 
         <div>
-            <button disabled="" id="checkout" class="btn btn-info btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
+            <button disabled="" id="checkout" class="btn btn-success btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
 
-            <br>
-            <br/>
-        <container>
-            <div class="col-3 d-flex justify-content-center align-items-center ">
-                <h5 id="current-time"></h5>
-            </div>
-        </container>            
             <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -347,7 +354,6 @@
                         <div class="modal-body">
                        
                            
-
                            <div class="row mb-2">
                             <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-sm">Amount to Pay:</label>
                             <div class="col-sm-8">
@@ -371,11 +377,13 @@
 
                            <hr>
 
-                           <center><button id="paywithcashbtn" class="btn btn-info rounded" onclick="paywithcash()">Cash</button></center>
+                           <center><button id="paywithgcashbtn" class="btn btn-warning rounded" onclick="paywithgcash()">Pay with G-cash</button></center>
 
-                           <center><button id="donepaywithcashbtn" class="btn btn-info rounded mb-2 fw-bold w-25" onclick="donepaywithcash()">Confirm Cash Payment</button></center>
+                           <center><img src="./assets/gcash_qr.jpg" id="gcashqr" alt="Gcash QR code" style="width: 300px;"></center>
 
-                           <center><button id="cancelpaywithcashbtn" class="btn btn-info rounded fw-bold w-25" onclick="cancelpaywithcash()">Cancel</button></center>
+                           <center><button id="donepaywithgcashbtn" class="btn btn-warning rounded mb-2 fw-bold w-25" onclick="donepaywithgcash()">Confirm G-cash Payment</button></center>
+
+                           <center><button id="cancelpaywithgcashbtn" class="btn btn-danger rounded fw-bold w-25" onclick="cancelpaywithgcash()">Cancel</button></center>
 
                            <hr>
 
@@ -387,25 +395,25 @@
                                 <input id="calculatorscreen" value="" type="text" class="bg-dark w-100 text-white text-end form-control form-control-md">
                             </div>
 
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('9'); selectaudio.play();" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">9</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('8'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">8</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('7'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">7</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('6'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">6</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('5'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">5</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('4'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">4</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('3'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">3</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('2'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">2</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('1'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">1</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('.'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">.</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('0'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">0</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('00'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-secondary rounded-pill text-center mb-1">00</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorcancel(); audio.play()" style="width:100px" class="text-white fw-bold btn bg-secondary rounded-pill text-center mb-1">delete</button></div>
-                            <div class="col-4 d-flex justify-content-center"><button onclick="exactamount(); selectaudio.play()" style="width:100px" class="text-white fw-bold btn bg-secondary rounded-pill text-center mb-1">Exact</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('9'); selectaudio.play();" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">9</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('8'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">8</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('7'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">7</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('6'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">6</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('5'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">5</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('4'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">4</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('3'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">3</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('2'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">2</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('1'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">1</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('.'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">.</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('0'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">0</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('00'); selectaudio.play()" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">00</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorcancel(); audio.play()" style="width:100px" class="text-white fw-bold btn bg-danger rounded-pill text-center mb-1">delete</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="exactamount(); selectaudio.play()" style="width:100px" class="text-white fw-bold btn bg-success rounded-pill text-center mb-1">Exact</button></div>
                             <hr>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('100'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">100</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('200'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">200</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('500'); selectaudio.play()" style="width:100px" class="text-white btn bg-light rounded-pill text-center mb-1">500</button></div>
-                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000'); selectaudio.play()" style="width:100px" class="text-white btn bg-light  text-center mb-1">1000</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('100'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">100</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('200'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">200</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('500'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">500</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000'); selectaudio.play()" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">1000</button></div>
                         
 
 
@@ -414,7 +422,7 @@
                         <div class="container-{breakpoint} row">
                         <div class="col-sm-4"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="audio.play()">Cancel Order</button></div>
                         <div class="col-sm-4"><button  id="confirmpaid" onclick="confirmpaidbutton(); selectaudio.play()" type="button" class="btn btn-primary" disabled>Confirm Payment</button></div>
-                        <div class="col-sm-4"><button data-bs-toggle="modal" data-bs-target="#myModal1"  id="printbutton" type="button" class="btn btn-primary" onclick="stopclock(); selectaudio.play()" disabled>Print Receipt</button></div>
+                        <div class="col-sm-4"><button data-bs-toggle="modal" data-bs-target="#myModal1"  id="printbutton" type="button" class="btn btn-primary" onclick="stopclock(); selectaudio.play()" disabled>Print Receipt & Proceed</button></div>
                         </div>
                         </div>
                     </div>
@@ -439,17 +447,17 @@
         <div id="receiptcontent" class="modal-body d-flex justify-content-center">
         <div>
           <center><h5 class="text-danger">My POS</h5></center>
-          <center><p>Transaction Receipt</p></center>
+          <center><p>This is not an official receipt.</p></center>
           <center><p id="receipttime"></p></center>
             <hr>
           <p id="receiptorderid"></p>
           <p>Total Amount: ₱<span id="receiptamount"></span></p>
-          <p>Cash Payment: ₱<span id="receiptcash"></span> </p>
+          <p>Received Cash: ₱<span id="receiptcash"></span> </p>
           <p>Change Amount: ₱<span id="receiptchange"></span></p>
-          <p>Cashier: <span id="receiptcashier"></span></p>
+          <p>Assigned Cashier: <span id="receiptcasher"></span></p>
           <p>Mode of Payment: <span id="receiptmop">Cash</span></p>
           <hr>
-          <center><p>Thank you, See us again!</p></center>
+          <center><p>Thank you! See us again!</p></center>
 
         </div>  
         </div>
