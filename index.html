@@ -329,21 +329,6 @@
 </div>    
 </div>
 </div>
-        <!----cashiernameandtime-->
-        <div class="col-3 d-flex justify-content-center align-items-center ">
-        <h5>Cashier: <span id="poscashiername"></span></h5>
-        </div>
-
-            
-        <div class="col-3 d-flex justify-content-end align-items-center">
-            <button class="btn btn-sm btn-secondary" onclick="logout()">Log-Out</button>
-        </div>   
-
-   
-        <div class="col-3 d-flex justify-content-center align-items-center ">
-            <h4 id="current-time"></h4>
-        </div>
-
     <div class="mx-auto col-sm-3 m-3 bg-light rounded">
         <div><center><h4 class="m-3">Purchased Items</h4></center></div>
         <center><div class="line mb-3"></div></center>
@@ -383,6 +368,18 @@
         <div>
             <button disabled="" id="checkout" class="btn btn-success btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="selectaudio.play()">Checkout</button>
 
+<!----cashiernameandtime-->
+            <div class="col-3 d-flex justify-content-center align-items-center ">
+                <h5>Cashier: <span id="poscashiername"></span></h5>
+            </div>
+            <div class="col-3 d-flex justify-content-end align-items-center">
+                <button class="btn btn-sm btn-secondary" onclick="logout()">Log-Out</button>
+            </div>   
+
+       
+            <div class="col-3 d-flex justify-content-center align-items-center ">
+                <h4 id="current-time"></h4>
+            </div>
 
             <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
