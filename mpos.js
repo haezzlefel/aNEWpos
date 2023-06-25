@@ -67,8 +67,8 @@ const totalitemtext = document.createTextNode('1');
 decrementbutton.setAttribute('onclick', 'incrementitem('+i+', -1)')
 incrementbutton.setAttribute('onclick', 'incrementitem('+i+', 1)')
 
-decrementbutton.className = 'btn-sm  ms-1 me-1 btn btn-primary  rounded-pill fw-bold'
-incrementbutton.className = 'btn-sm  me-1 btn btn-primary rounded-pill fw-bold'
+decrementbutton.className = 'btn-sm  ms-1 me-1 btn btn-info  rounded-pill fw-bold'
+incrementbutton.className = 'btn-sm  me-1 btn btn-info rounded-pill fw-bold'
 totalitemspan.className = ' px-2 fw-bold item'+ i;
 
 decrementbutton.appendChild(decrementbuttontext);
