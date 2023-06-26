@@ -271,12 +271,6 @@ function calculatorpress(number){
     
 };
 
-function exactamount () {
-    calculatorscreendisplay.value = document.getElementById('amount');
-    calculatorscreendisplay.value = amount.value;
-    enableconfirmpaidbutton()
-    
-};
 
 
 function calculatorcancel () {
@@ -380,37 +374,33 @@ function getreceiptdetails() {
     document.getElementById('receiptcash').innerHTML = localStorage.getItem('receipt_amountpaid')
     document.getElementById('receiptchange').innerHTML = localStorage.getItem('receipt_amountchange')
     document.getElementById('receiptorderid').innerHTML = document.getElementById('ordernumberspantag').innerHTML
-    document.getElementById('receiptcasher').innerHTML = document.getElementById('poscashername').innerHTML
+    document.getElementById('receiptcashier').innerHTML = document.getElementById('poscashiername').innerHTML
 }
 
 const paywithcashbtn = document.getElementById('paywithcashbtn')
-const donepaywithgcashbtn = document.getElementById('donepaywithcashbtn')
-const cancelpaywithgcashbtn = document.getElementById('cancelpaywithcashbtn')
-const gcashqr = document.getElementById('gcashqr')
+const donepaywithcashbtn = document.getElementById('donepaywithcashbtn')
+const cancelpaywithcashbtn = document.getElementById('cancelpaywithcashbtn')
+
 
 function paywithcash() {
-    gcashqr.style.display = "block"
-    donepaywithgcashbtn.style.display = "block"
-    cancelpaywithgcashbtn.style.display = "block"
+    donepaywithcashbtn.style.display = "block"
     paywithcashbtn.style.display = "none"
 }
 
 function donepaywithcash() {
-    gcashqr.style.display = "none"
-    donepaywithgcashbtn.style.display = "none"
-    cancelpaywithgcashbtn.style.display = "none"
-    paywithgcashbtn.style.display = "block"
+    
+    cancelpaywithcashbtn.style.display = "none"
+    paywithcashbtn.style.display = "block"
 
-    document.getElementById('receiptmop').innerHTML = 'G-cash';
+    document.getElementById('receiptmop').innerHTML = 'cash';
 
-    exactamount ()
+    
     confirmpaidbutton()
     getreceiptdetails()
 }
 
 function cancelpaywithcash() {
-    gcashqr.style.display = "none"
-    donepaywithgcashbtn.style.display = "none"
+    donepaywithcashbtn.style.display = "none"
     cancelpaywithcashbtn.style.display = "none"
     paywithcashbtn.style.display = "block"
 
