@@ -67,8 +67,8 @@ const totalitemtext = document.createTextNode('1');
 decrementbutton.setAttribute('onclick', 'incrementitem('+i+', -1)')
 incrementbutton.setAttribute('onclick', 'incrementitem('+i+', 1)')
 
-decrementbutton.className = 'btn-sm  ms-1 me-1 btn btn-info  rounded-pill fw-bold'
-incrementbutton.className = 'btn-sm  me-1 btn btn-info rounded-pill fw-bold'
+decrementbutton.className = 'btn-sm  ms-1 me-1 btn btn-sucess   fw-bold'
+incrementbutton.className = 'btn-sm  me-1 btn btn-sucess  fw-bold'
 totalitemspan.className = ' px-2 fw-bold item'+ i;
 
 decrementbutton.appendChild(decrementbuttontext);
@@ -98,7 +98,7 @@ const deletebuttontext = document.createTextNode('Remove');
 deletebutton.setAttribute('onclick', 'deleteitem('+i+', this)');
 
 deletebutton.appendChild(deletebuttontext);
-deletebutton.className = 'btn btn-info btn-sm m-2 ms-auto';
+deletebutton.className = 'btn btn-warning btn-sm m-2 ms-auto';
 
 orderitemleftsidespan.appendChild(orderitemname);
 
