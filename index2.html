@@ -432,7 +432,7 @@
                            <div class="container-fluid mx-auto row">
 
                             <div class="col-12 mb-3">
-                                <input id="calculatorscreen" value="" type="text" class="bg-dark w-100 text-white text-end form-control form-control-md">
+                                <input id="calculatorscreen" value="" type="text" class="bg-secondary w-100 text-white text-end form-control form-control-md">
                             </div>
 
                             <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('9'); selectaudio.play();" style="width:100px" class="text-light fw-bold btn bg-secondary  text-center mb-1">7</button></div>
@@ -457,8 +457,8 @@
                         <div class="modal-footer">
                         <div class="container-{breakpoint} row">
                         <div class="col-sm-4"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="audio.play()">Cancel</button></div>
-                        <div class="col-sm-4"><button  id="confirmpaid" onclick="confirmpaidbutton(); selectaudio.play()" type="button" class="btn btn-info" disabled>Confirm Payment</button></div>
-                        <div class="col-sm-4"><button data-bs-toggle="modal" data-bs-target="#myModal1"  id="printbutton" type="button" class="btn btn-info" onclick="stopclock(); selectaudio.play()" disabled>Print Receipt & Proceed</button></div>
+                        <div class="col-sm-4"><button  id="confirmpaid" onclick="confirmpaidbutton(); selectaudio.play()" type="button" class="btn btn-primary" disabled>Confirm Payment</button></div>
+                        <div class="col-sm-4"><button data-bs-toggle="modal" data-bs-target="#myModal1"  id="printbutton" type="button" class="btn btn-primary" onclick="stopclock(); selectaudio.play()" disabled>Print Receipt & Proceed</button></div>
                         </div>
                         </div>
                     </div>
@@ -482,7 +482,7 @@
         <!-- Modal body -->
         <div id="receiptcontent" class="modal-body d-flex justify-content-center">
         <div>
-          <center><h5 class="text-danger">My POS</h5></center>
+          <center><h5 class="text-success">My POS</h5></center>
           <center><p>This is not an official receipt.</p></center>
           <center><p id="receipttime"></p></center>
             <hr>
