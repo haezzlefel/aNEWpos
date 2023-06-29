@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h2>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Geolocation Api</h2>
+
+    <button onclick="getLocation()">click me</button>
+
+    <p id="position"></p>
+    <script>
+    const x = document.getElementById("position");
+        
+    function getLocation () {
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";           
+
+        }
+
+    }
+
+    function showPosition (position) {
+        x.innerHTML = "Latitude:" + position.coords.latitude +     
+        " <br> Longitude: "  + position.coords.longitude;
+
+    }
+
+
+    </script>
+
+    <br>
+    <!-----local storage----->
+    
+    <h2>local storage</h2>
+    <p id="local"></p>
+    <script>
+        localStorage.setItem("name","zila");
+        document.getElementById("local").innerHTML = localStorage.getItem("name");
+
+
+
+    </script>
+
+<br>
+<!-----local storage----->
+
+<h2>loacl storage  input type</h2>
+<label for="name">fullname </label><br>
+<input type="text" id = fname/> <br> 
+<label for="age">age</label>
+<input type="text" id="age/"><br>
+<label for="course"> favorite course</label>
+<input type="text" id="course/"><br>
+
+<div class="right">
+    <input type="button" value="Add to localStorage" onclick="add_local()">
+    <input type="button" value="show localStorage" onclick="show_local()">
+
+</div>
+<div class="display">
+    <label for="display">display</label>
+    <textarea id="display" name="display" row="10" ></textarea>
+
+</div>
+<script>
+    function add_local() {
+        const display = {};
+        display.fname = document.getElementById('fname').value;
+        display.age = document.getElementById('age').value;
+        display.course = document.getElementById('course').value;
+
+        window.localStorage.setItem('display',JSON.stringify(display));
+    }
+
+    function show_local(){
+        let _display = JSON.parse(localStorage.getItem("dispaly"));
+        document.getElementById('fname').value = _display.fname;
+        document.getElementById('age').value = _display.age;
+        document.getElementById('course').value = _display.course;
+        document.getElementById('display').value = Object.values(_display);
+
+
+    }
+
+</script>
+
+<!---session storage-->
+<p id="sess"></p>
+<script>
+sessionStorage.setItem.setItem("name1" , "marasigan");
+document.getElementById("sess").innerHTML = sessionStorage.getItem("name");
+
+</script>
+
+<!---sessionstorage---->
+<input type="number" id="quantity">
+<p id="demo4"> you have"value" coins</p>
+<script>
+document.getElementById('quantity').onkeyup = function() {
+    var quantity = this.value;
+    sessionStorage.setItem('quantity', quantity);
+    document.getElementById('demo4').innerHTML = 'you have' + sessionStorage.getItem('quantity') +  'coins';
+}
+
+</script>
+</body>
+</html>
