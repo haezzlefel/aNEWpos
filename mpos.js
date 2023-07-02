@@ -32,6 +32,7 @@ document.getElementById('poscashiername').innerHTML = localStorage.getItem('cash
 
 const audio = new Audio();
 audio.src = "./assets/beep.mp3";
+audio.src = ".";
 audio.volume = .1;
 
 const selectaudio = new Audio();
