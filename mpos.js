@@ -31,11 +31,11 @@ document.getElementById('poscashiername').innerHTML = localStorage.getItem('cash
 
 
 const audio = new Audio();
-audio.src = "./tonebeep.";
+audio.src = "#";
 audio.volume = .1;
 
 const selectaudio = new Audio();
-selectaudio.src = "./assets/selectbeep.mp3"
+selectaudio.src = "#";
 selectaudio.volume = 1;
 
 
@@ -372,7 +372,7 @@ function nextcustomerbuttonclear() {
 
 
 
-    function signout() {
+    function logout() {
         window.location.assign("index.html");
         alert("You are now logged out!")
         noBack()
