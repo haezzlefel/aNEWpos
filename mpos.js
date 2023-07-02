@@ -1,6 +1,26 @@
 
 
 let time = document.getElementById("current-time");
+let receipttime =  document.getElementById("receipttime");
+
+setInterval(() => {
+
+    let date = new Date();
+    time.innerHTML = date.toLocaleTimeString();
+    
+}, 1000);
+
+
+const myInterval = setInterval(receipt_time, 1000);
+
+function receipt_time() {
+    const date = new Date();
+    receipttime.innerHTML = date.toLocaleTimeString();
+}
+
+function stopclock() {
+    clearInterval(myInterval);
+}
 
   
 
@@ -11,11 +31,11 @@ document.getElementById('poscashiername').innerHTML = localStorage.getItem('cash
 
 
 const audio = new Audio();
-audio.src = "./tonebeep/scanner.mp3";
+audio.src = "./assets/beep.mp3";
 audio.volume = .1;
 
 const selectaudio = new Audio();
-selectaudio.src = "./tonebeep/scanner.mp3"
+selectaudio.src = "./assets/selectbeep.mp3"
 selectaudio.volume = 1;
 
 
@@ -67,8 +87,8 @@ const totalitemtext = document.createTextNode('1');
 decrementbutton.setAttribute('onclick', 'incrementitem('+i+', -1)')
 incrementbutton.setAttribute('onclick', 'incrementitem('+i+', 1)')
 
-decrementbutton.className = 'btn-sm  ms-1 me-1 btn btn-success   fw-bold'
-incrementbutton.className = 'btn-sm  me-1 btn btn-success  fw-bold'
+decrementbutton.className = 'btn-sm  ms-1 me-1 btn btn-secondary fw-bold'
+incrementbutton.className = 'btn-sm  me-1 btn btn-secondary fw-bold'
 totalitemspan.className = ' px-2 fw-bold item'+ i;
 
 decrementbutton.appendChild(decrementbuttontext);
@@ -86,7 +106,7 @@ const orderitempricespan = document.createElement('span');
 const orderitemname = document.createTextNode(itemname);
 const orderitemprice = document.createTextNode(' ₱' + itemprice);
 
-orderitempricespan.className = 'text-info d-flex align-items-end'
+orderitempricespan.className = 'text-secondary d-flex align-items-end'
 
 orderitempricespan.appendChild(orderitemprice);
 
@@ -98,7 +118,7 @@ const deletebuttontext = document.createTextNode('Remove');
 deletebutton.setAttribute('onclick', 'deleteitem('+i+', this)');
 
 deletebutton.appendChild(deletebuttontext);
-deletebutton.className = 'btn btn-warning btn-sm m-2 ms-auto';
+deletebutton.className = 'btn btn-secondary btn-sm m-2 ms-auto';
 
 orderitemleftsidespan.appendChild(orderitemname);
 
@@ -271,6 +291,12 @@ function calculatorpress(number){
     
 };
 
+function exactamount () {
+    calculatorscreendisplay.value = document.getElementById('amount');
+    calculatorscreendisplay.value = amount.value;
+    enableconfirmpaidbutton()
+    
+};
 
 
 function calculatorcancel () {
@@ -346,7 +372,7 @@ function nextcustomerbuttonclear() {
 
 
 
-    function logout() {
+    function signout() {
         window.location.assign("index.html");
         alert("You are now logged out!")
         noBack()
@@ -359,75 +385,58 @@ function nextcustomerbuttonclear() {
 
 
 function getreceiptdetails() {
-    let receiptcustomertable = document.getElementById('customername').value
     let receiptamount = document.getElementById('amount').value
     let receiptcustomeramountpaid = document.getElementById('customeramountpaid').value
     let receiptamountchange = document.getElementById('amountchange').value
 
-    localStorage.setItem('receipt_table', receiptcustomertable);
+    
     localStorage.setItem('receipt_amount', receiptamount);
     localStorage.setItem('receipt_amountpaid', receiptcustomeramountpaid);
     localStorage.setItem('receipt_amountchange', receiptamountchange);
 
-    document.getElementById('receipttable').innerHTML = localStorage.getItem('receipt_table')
+    
     document.getElementById('receiptamount').innerHTML = localStorage.getItem('receipt_amount')
     document.getElementById('receiptcash').innerHTML = localStorage.getItem('receipt_amountpaid')
     document.getElementById('receiptchange').innerHTML = localStorage.getItem('receipt_amountchange')
     document.getElementById('receiptorderid').innerHTML = document.getElementById('ordernumberspantag').innerHTML
-    document.getElementById('receiptcashier').innerHTML = document.getElementById('poscashiername').innerHTML
+    document.getElementById('receiptcasher').innerHTML = document.getElementById('poscashername').innerHTML
 }
 
-const paywithcashbtn = document.getElementById('paywithcashbtn')
-const donepaywithcashbtn = document.getElementById('donepaywithcashbtn')
-const cancelpaywithcashbtn = document.getElementById('cancelpaywithcashbtn')
+const paywithgcashbtn = document.getElementById('paywithgcashbtn')
+const donepaywithgcashbtn = document.getElementById('donepaywithgcashbtn')
+const cancelpaywithgcashbtn = document.getElementById('cancelpaywithgcashbtn')
+const gcashqr = document.getElementById('gcashqr')
 
-
-function paywithcash() {
-    donepaywithcashbtn.style.display = "block"
-    paywithcashbtn.style.display = "none"
+function paywithgcash() {
+    gcashqr.style.display = "block"
+    donepaywithgcashbtn.style.display = "block"
+    cancelpaywithgcashbtn.style.display = "block"
+    paywithgcashbtn.style.display = "none"
 }
 
-function donepaywithcash() {
-    
-    cancelpaywithcashbtn.style.display = "none"
-    paywithcashbtn.style.display = "block"
+function donepaywithgcash() {
+    gcashqr.style.display = "none"
+    donepaywithgcashbtn.style.display = "none"
+    cancelpaywithgcashbtn.style.display = "none"
+    paywithgcashbtn.style.display = "block"
 
-    document.getElementById('receiptmop').innerHTML = 'cash';
+    document.getElementById('receiptmop').innerHTML = 'G-cash';
 
-    
+    exactamount ()
     confirmpaidbutton()
     getreceiptdetails()
 }
 
-function cancelpaywithcash() {
-    donepaywithcashbtn.style.display = "none"
-    cancelpaywithcashbtn.style.display = "none"
-    paywithcashbtn.style.display = "block"
+function cancelpaywithgcash() {
+    gcashqr.style.display = "none"
+    donepaywithgcashbtn.style.display = "none"
+    cancelpaywithgcashbtn.style.display = "none"
+    paywithgcashbtn.style.display = "block"
 
 }
 
 
 
-let receipttime =  document.getElementById("receipttime");
-
-setInterval(() => {
-
-    let date = new Date();
-    time.innerHTML = date.toLocaleTimeString();
-    
-}, 1000);
-
-
-const myInterval = setInterval(receipt_time, 1000);
-
-function receipt_time() {
-    const date = new Date();
-    receipttime.innerHTML = date.toLocaleTimeString();
-}
-
-function stopclock() {
-    clearInterval(myInterval);
-}
 
 
 
