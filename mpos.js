@@ -31,11 +31,11 @@ document.getElementById('poscashiername').innerHTML = localStorage.getItem('cash
 
 
 const audio = new Audio();
-audio.src = "#";
+audio.src = "./tonebeep/scanner.mp3";
 audio.volume = .1;
 
 const selectaudio = new Audio();
-selectaudio.src = "#";
+selectaudio.src = "./tonebeep/scanner.mp3";
 selectaudio.volume = 1;
 
 
@@ -399,43 +399,8 @@ function getreceiptdetails() {
     document.getElementById('receiptcash').innerHTML = localStorage.getItem('receipt_amountpaid')
     document.getElementById('receiptchange').innerHTML = localStorage.getItem('receipt_amountchange')
     document.getElementById('receiptorderid').innerHTML = document.getElementById('ordernumberspantag').innerHTML
-    document.getElementById('receiptcasher').innerHTML = document.getElementById('poscashername').innerHTML
+    document.getElementById('receiptcashier').innerHTML = document.getElementById('poscashiername').innerHTML
 }
-
-const paywithgcashbtn = document.getElementById('paywithgcashbtn')
-const donepaywithgcashbtn = document.getElementById('donepaywithgcashbtn')
-const cancelpaywithgcashbtn = document.getElementById('cancelpaywithgcashbtn')
-const gcashqr = document.getElementById('gcashqr')
-
-function paywithgcash() {
-    gcashqr.style.display = "block"
-    donepaywithgcashbtn.style.display = "block"
-    cancelpaywithgcashbtn.style.display = "block"
-    paywithgcashbtn.style.display = "none"
-}
-
-function donepaywithgcash() {
-    gcashqr.style.display = "none"
-    donepaywithgcashbtn.style.display = "none"
-    cancelpaywithgcashbtn.style.display = "none"
-    paywithgcashbtn.style.display = "block"
-
-    document.getElementById('receiptmop').innerHTML = 'G-cash';
-
-    exactamount ()
-    confirmpaidbutton()
-    getreceiptdetails()
-}
-
-function cancelpaywithgcash() {
-    gcashqr.style.display = "none"
-    donepaywithgcashbtn.style.display = "none"
-    cancelpaywithgcashbtn.style.display = "none"
-    paywithgcashbtn.style.display = "block"
-
-}
-
-
 
 
 
